@@ -1,0 +1,13 @@
+apiVersion: fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: hello-world
+spec:
+  interval: 1m
+  path: ./kustomize
+  prune: true
+  source:
+    git:
+      url: git@github.com:crepuscule/hello-world.git
+      ref: main
+  validation: client
