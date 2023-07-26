@@ -1,13 +1,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: hello-world-job-v1
+  name: hello-world-job-v2
 spec:
-  ttlSecondsAfterFinished: 60
   template:
     spec:
       containers:
-      - name: hello-world-v1
+      - name: hello-world-v2
         image: busybox
         command: ['sh', '-c', 'echo "bad idea!"; ps aux; sleep 30']
       restartPolicy: Never
