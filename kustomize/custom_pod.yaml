@@ -1,7 +1,7 @@
 apiVersion: batch/v1
-kind: Job
+kind: pod
 metadata:
-  name: hello-world-job
+  name: hello-world-service
 spec:
   template:
     spec:
